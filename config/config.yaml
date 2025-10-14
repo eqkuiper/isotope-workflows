@@ -1,0 +1,5 @@
+# Snakemake execution settings
+snakemake:
+  cores: 4            # default number of cores
+  use_conda: true     # automatically use conda environments
+  rerun_incomplete: true  # optional: rerun incomplete jobs
