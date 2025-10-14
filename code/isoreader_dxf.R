@@ -5,6 +5,6 @@ devtools::install_github("isoverse/isoreader")
 library("isoreader")
 
 # read in .dxf files
-dxf_raw <- iso_read_continuous_flow(snakemake@input[["dxf_raw"]])
+dxf_raw <- iso_read_continuous_flow(snakemake@input[["dxf_raw"]], cache = FALSE)
 
 iso_save(dxf_raw, snakemake@output[["out_file"]])
