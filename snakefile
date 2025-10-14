@@ -4,7 +4,8 @@ rule isoreader:
     input: 
         dxf_raw="data/maca_bugs"
     output:
-        out_file="data/dxf_raw.cf.rds" # do NOT include any file extensions here
+        out_file="data/dxf_raw.cf.rds", 
+        problem_file="data/dxf_read_problems.csv"
     conda:
         "envs/isoreader.yaml"
     script:
