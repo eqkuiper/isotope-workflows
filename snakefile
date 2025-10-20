@@ -11,5 +11,13 @@ rule isoreader:
     script:
         "code/isoreader_dxf.R"
 
-
+rule analysis:
+    input: 
+        dxf_rds="data/dxf_raw.cf.rds"
+    output:
+        out_file="item.rds"
+    conda: 
+        "envs/isoreader.yaml"
+    script:
+        "analysis_dxf.R"
 
