@@ -7,3 +7,4 @@ dependencies:
   - r-tidyverse
   - r-devtools
   - r-future
+  - r-openxlsx
