@@ -10,9 +10,10 @@ dxf_comp <- dxf_raw %>%
   iso_filter_files_with_problems() # remove aborted runs, etc
 
 dxf_comp %>% 
-  iso_plot_continuous_flow_data()
+  iso_plot_continuous_flow_data() + 
+  scale_color_viridis_d(option="plasma")
 
-ggsave("test.png",
+ggsave(paste0(Sys.Date(), "_all_chromatograms.png"),
   width = 60,
   height = 40,
   limitsize=FALSE)
